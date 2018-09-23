@@ -23,4 +23,10 @@ class Song
     @@artists.uniq
   end
 
+  def self.genre_count
+    hist_hash = {}
+    @@genres.each {|genre| hist_hash[genre] ? hist_hash[genre] += 1 : hist_hash[genre] = 1}
+    hist_hash
+  end
+
 end
