@@ -29,4 +29,10 @@ class Song
     hist_hash
   end
 
+  def self.artist_count
+    hist_hash = {}
+    @@artists.each {|artist| hist_hash[artist] ? hist_hash[artist] += 1 : hist_hash[artist] = 1}
+    hist_hash
+  end
+
 end
